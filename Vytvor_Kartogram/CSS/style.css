@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nadpis{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.mapa {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.legenda {
+  padding-right: 20px;
+  text-align: center;
+}
+
+.legenda h3 {
+  margin-bottom: 10px;
+}
+
+.legenda_prvni_kategorie {
+  height: 20px;
+  width: 50px;
+  background: #FFFDDE;
+  border: 1px solid black;
+}
+
+.legenda_druha_kategorie {
+  height: 20px;
+  width: 50px;
+  background: #E7EAB5;
+  border: 1px solid black;
+}
+
+.legenda_treti_kategorie {
+  height: 20px;
+  width: 50px;
+  background: #C9E4C5;
+  border: 1px solid black;
+}
+
+.legenda_ctvrta_kategorie {
+  height: 20px;
+  width: 50px;
+  background: #87A8A4;
+  border: 1px solid black;
+}
+
+.legenda_pata_kategorie {
+  height: 20px;
+  width: 50px;
+  background: #3A6351;
+  border: 1px solid black;
+}
+
+
+/* data */
+
+.data {
+  text-align: center;
+}
+
+.data {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 3px 0;
+  border-radius: 3px;
+  border: 1px solid black;
+  width: 100px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background: linear-gradient(rgb(216, 218, 121), rgb(149, 151, 18));
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
