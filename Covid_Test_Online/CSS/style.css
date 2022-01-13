@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: radial-gradient(#fbfdff, #80bff1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* utilities */
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border-style: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, purple, pink);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn a {
+  background: none;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+/* kruhy */
+.kruh {
+  position: absolute;
+  max-height: 1500px;
+  z-index: -1;
+  top: -30vh;
+  left: 40vh;
+}
+
+.kruh-1 {
+  position: absolute;
+  max-height: 1250px;
+  z-index: -1;
+  top: -30vh;
+  left: 40vh;
+}
+
+.kruh-1:hover {
+  stroke-width: 3;
+  stroke-opacity: 0.8;
+  stroke-dasharray: 5px;
+}
+
+/* virus velký */
+.virus-big-1 , .virus-big-2, .virus-big-3 {
+  position: absolute;
+  top: 15vh;
+  left: 20vh;
+  height: 120px;
+  width: 120px;
+  background-image: url("../images/virus_L.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+
+  animation-name: floating-big;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-big {
+  from { transform: translate(0,  0px); }
+  30%  { transform: translate(0, 10px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+.virus-big-2 {
+  top: 35vh;
+  left: 180vh;
+}
+
+/* virus malý */
+.virus-small-1 , .virus-small-2, .virus-small-3 {
+  position: absolute;
+  top: 8vh;
+  left: 20vh;
+  height: 55px;
+  width: 55px;
+  background-image: url("../images/virus_M.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+
+  animation-name: floating-small;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.virus-small-2 {
+  top: 2vh;
+  left: 110vh;
+}
+
+.virus-small-3 {
+  top: 15vh;
+  left: 180vh;
+}
+
+
+@keyframes floating-small {
+  from { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 8px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+/* virus other */
+.virus-other-1, .virus-other-2, .virus-other-3, .virus-other-4, .virus-other-5 {
+  position: absolute;
+  top: 40vh;
+  left: 10vh;
+  height: 25px;
+  width: 25px;
+  background-image: url("../images/virus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.virus-other-2 {
+  top: 5vh;
+  left: 30vh;
+}
+
+.virus-other-3 {
+  top: 5vh;
+  left: 130vh;
+}
+
+.virus-other-4 {
+  top: 10vh;
+  left: 160vh;
+}
+
+.virus-other-5 {
+  top: 40vh;
+  left: 165vh;
+}
+
+/* eclipse-background */
+
+.eclipse-background {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+
+/* content */
+
+.container{
+  text-align: center;
+  margin-top: 30vh;
+}
+
+
+.container h3 {
+  color: purple;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+
+/* bar */
+.bar-border {
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 1px 2px;
+  width: 50vh;
+  height: 60px;
+  border: 1px solid grey;
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.myBar {
+  width: 10%;
+  height: 53px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, purple, pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myBar-loaded {
+  width: 100%;
+  height: 53px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, purple, pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* krok-2 */
+
+.container-krok-2 {
+  text-align: center;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-krok-2 h3 {
+  color: purple;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+.game-board {
+  margin-top: 10px;
+  width: 120vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.droppable-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-elements {
+  margin-top: 20px;
+}
+
+.empty-1 {
+  margin-top: 10px;
+  margin-left: 60px;
+  width: 160px;
+  height: 160px;
+  background-image: url("../images/rectangle_empty.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 160px;
+  height: 160px;
+  background-image: url("../images/polygon_empty.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 160px;
+  height: 160px;
+  background-image: url("../images/eclipse_empty.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rectangle, #eclipse, #polygon {
+  height: 100px;
+  height: 100px;
+}
+
+.spravne {
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.pokracovat {
+  display: none;
+  width: 30%;
+  align-self: center;
+}
+
+.zacit-znovu {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* krok-3 */
+
+.container-krok-3 {
+  text-align: center;
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-krok-3 h3 {
+  color: purple;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+.dog {
+  height: 200px;
+}
+
+.answers {
+  display: flex;
+  align-items: center;
+}
+
+.answers button {
+  margin-left: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.vysledek {
+  text-align: center;
+  margin-top: 60vh;
+}
+
+.vysledek-testu {
+  color: purple;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
