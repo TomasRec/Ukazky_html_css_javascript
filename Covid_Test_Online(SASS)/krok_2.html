@@ -10,30 +10,35 @@
 </head>
 <body>
 
-<!-- virusy -->
+<!-- viruses -->
+<div class="big-viruses">
+  <div class="virus-big-1"></div>
+  <div class="virus-big-2"></div>
+</div>
 
-<div class="virus-big-1"></div>
-<div class="virus-big-2"></div>
+<div class="small-viruses">
+  <div class="virus-small-1"></div>
+  <div class="virus-small-2"></div>
+  <div class="virus-small-3"></div>
+</div>
 
-<div class="virus-small-1"></div>
-<div class="virus-small-2"></div>
-<div class="virus-small-3"></div>
+<div class="other-viruses">
+  <div class="virus-other-1"></div>
+  <div class="virus-other-2"></div>
+  <div class="virus-other-3"></div>
+  <div class="virus-other-4"></div>
+  <div class="virus-other-5"></div>
+</div>
 
-<div class="virus-other-1"></div>
-<div class="virus-other-2"></div>
-<div class="virus-other-3"></div>
-<div class="virus-other-4"></div>
-<div class="virus-other-5"></div>
-
-<!-- kruhy -->
+<!-- circles -->
 <div class="kruh-div">
-  <svg class="kruh" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="700" viewBox="0 0 873 873">
-    <g class="kruh" id="Ellipse_1" data-name="Ellipse 1" stroke="#b2dcff" stroke-width="1" fill="blue" fill-opacity="0">
+  <svg class="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="700" viewBox="0 0 873 873">
+    <g class="circle" id="Ellipse_1" data-name="Ellipse 1" stroke="#b2dcff" stroke-width="1" fill="blue" fill-opacity="0">
       <circle cx="436.5" cy="436.5" r="400"/>
     </g>
   </svg>
-  <svg class="kruh-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="700" viewBox="0 0 873 873">
-    <g class="kruh-1" id="Ellipse_2" data-name="Ellipse 1" stroke="#b2dcff" stroke-width="1" fill="blue" fill-opacity="0">
+  <svg class="circle-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="700" viewBox="0 0 873 873">
+    <g class="circle-1" id="Ellipse_2" data-name="Ellipse 1" stroke="#b2dcff" stroke-width="1" fill="blue" fill-opacity="0">
       <circle cx="436.5" cy="436.5" r="380"/>
     </g>
   </svg> 
@@ -52,19 +57,13 @@
       <div id="div3" data-draggable-id="drag3" ondrop="drop(event)" ondragover="allowDrop(event)" class="empty-3" data-draggable-id="eclipse"></div>
     </div>
     <div class="draggable-elements">
+      <img id="drag3" ondragstart="drag(event)" src="images/eclipse.svg" draggable="true">
       <img id="drag1" ondragstart="drag(event)" src="images/rectangle.svg" draggable="true">
       <img id="drag2" ondragstart="drag(event)" src="images/polygon.svg" draggable="true">
-      <img id="drag3" ondragstart="drag(event)" src="images/eclipse.svg" draggable="true">
     </div>
-    <button class="btn pokracovat">
-      <a href="./krok_3.html">Pokračovat</a>
-    </button>
+    <a href="./krok_3.html" class="btn-1 pokracovat">Pokračovat</a>
   </div>
-
-  
 </div>
-
-
 
 <script src="./JS/script.js"></script>
 </body>

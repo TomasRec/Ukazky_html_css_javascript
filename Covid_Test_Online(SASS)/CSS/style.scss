@@ -1,0 +1,317 @@
+@import "variables";
+@import "functions-mixins";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $muj-font;
+  text-align: center;
+  background: radial-gradient(#fbfdff, #80bff1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// h3 properties
+%h3-properties {
+  color: $purple-color;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+// buttons
+%btn-default {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 40px;
+  border-style: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  background: linear-gradient(45deg, purple, pink);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn{
+  &-1 {
+  @extend %btn-default;
+   color: $light-color;
+   font-size: 1.5rem;
+  }
+  
+  &-other {
+    @extend %btn-default;
+    margin-left: 10px;
+    &-yes {
+      background: $color-positive;
+      color: set-text-color($color-positive);
+    }
+
+    &-no {
+      background: $color-negative;
+      color: set-text-color($color-negative);
+    }
+  }
+}
+
+// circles
+%circles-all {
+  position: absolute;
+  z-index: -1;
+  @include top-left(-30vh, 40vh);
+}
+
+.circle {
+  @extend %circles-all;
+  max-height: 1500px;
+}
+
+.circle-1 {
+  @extend %circles-all;
+  max-height: 1250px;
+
+  &:hover {
+    stroke-width: 3;
+    stroke-opacity: 0.8;
+    stroke-dasharray: 5px;
+  }
+}
+
+// viruses
+%viruses-all {
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// big
+.big-viruses{
+  .virus-big-1 , .virus-big-2, .virus-big-3 {
+    @extend %viruses-all;
+    @include virus-size-position(120px,120px, 15vh, 20vh);
+    background-image: url("../images/virus_L.svg");
+    background-size: 75px 75px;
+    animation-name: floating-big;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .virus-big-2 {
+    @include top-left(35vh, 180vh);
+  }
+
+  @keyframes floating-big {
+    from { transform: translate(0,  0px); }
+    30%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+  }
+}
+
+// small
+.small-viruses{
+  .virus-small-1 , .virus-small-2, .virus-small-3 {
+    @extend %viruses-all;
+    @include virus-size-position(75px, 75px, 8vh, 20vh);
+    background-image: url("../images/virus_M.svg");
+    background-size: 50px 50px;
+    animation-name: floating-small;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .virus-small-2 {
+    @include top-left(2vh, 110vh);
+  }
+  
+  .virus-small-3 {
+    @include top-left(15vh, 180vh);
+  }
+
+  @keyframes floating-small {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 8px); }
+    to   { transform: translate(0, -0px); }    
+  }
+}
+
+// other
+.other-viruses {
+  .virus-other-1, .virus-other-2, .virus-other-3, .virus-other-4, .virus-other-5 {
+    @extend %viruses-all;
+    @include virus-size-position(50px, 50px, 40vh, 10vh);
+    background-image: url("../images/virus.svg");
+    background-size: 20px 20px;
+  }
+
+  .virus-other-2 {
+    @include top-left(5vh, 30vh);
+  }
+  
+  .virus-other-3 {
+    @include top-left(5vh, 130vh);
+  }
+  
+  .virus-other-4 {
+    @include top-left(10vh, 160vh);
+  }
+  
+  .virus-other-5 {
+    @include top-left(40vh, 165vh);
+  }
+}
+
+// content index.html
+.container{
+  margin-top: 30vh;
+
+  h3 {
+    @extend %h3-properties;
+  }
+}
+
+// krok_1
+%bar-properties {
+  height: 53px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, purple, pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  .bar-border {
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 1px 2px;
+    width: 50vh;
+    height: 60px;
+    border: 1px solid grey;
+    background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .myBar {
+    @extend %bar-properties;
+    width: 10%;
+  }
+
+  .myBar-loaded {
+    @extend %bar-properties;
+    width: 100%;
+  }
+}
+
+// krok_2
+%empty-elements {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 160px;
+  height: 160px;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include flex-center-center;
+}
+
+.container-krok-2 {
+  text-align: center;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    @extend %h3-properties;
+  }
+
+  .game-board {
+    margin-top: 10px;
+    width: 120vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+    .droppable-elements {
+      @include flex-center-center;
+    }
+
+    .draggable-elements {
+      @include flex-center-center;
+      margin-top: 20px;
+    }
+
+    .empty-1, .empty-2, .empty-3 {
+      @extend %empty-elements;
+      background-image: url("../images/rectangle_empty.png");
+    }
+    
+    .empty-2 {
+      background-image: url("../images/polygon_empty.svg");
+    }
+    
+    .empty-3 {
+      background-image: url("../images/eclipse_empty.svg");
+    }
+
+  #rectangle, #eclipse, #polygon {
+    height: 100px;
+    height: 100px;
+  }
+  
+  .spravne {
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .pokracovat {
+    display: none;
+    width: 30%;
+    align-self: center;
+  }
+  
+  .zacit-znovu {
+    text-decoration: none;
+    color: $dark-color;
+    font-weight: bold;
+  }
+}
+
+// krok_3
+.container-krok-3 {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3{
+    @extend %h3-properties;
+  }
+
+  .dog {
+    height: 200px;
+  }
+
+  .answers {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.vysledek-testu {
+  margin-top: 60vh;
+  @extend %h3-properties;
+}

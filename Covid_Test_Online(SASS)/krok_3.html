@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>Online Covid Test</title>
+</head>
+<body>
+
+<!-- viruses -->
+<div class="big-viruses">
+  <div class="virus-big-1"></div>
+  <div class="virus-big-2"></div>
+</div>
+
+<div class="small-viruses">
+  <div class="virus-small-1"></div>
+  <div class="virus-small-2"></div>
+  <div class="virus-small-3"></div>
+</div>
+
+<div class="other-viruses">
+  <div class="virus-other-1"></div>
+  <div class="virus-other-2"></div>
+  <div class="virus-other-3"></div>
+  <div class="virus-other-4"></div>
+  <div class="virus-other-5"></div>
+</div>
+
+<!-- circles -->
+<div class="kruh-div">
+  <svg class="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="700" viewBox="0 0 873 873">
+    <g class="circle" id="Ellipse_1" data-name="Ellipse 1" stroke="#b2dcff" stroke-width="1" fill="blue" fill-opacity="0">
+      <circle cx="436.5" cy="436.5" r="400"/>
+    </g>
+  </svg>
+  <svg class="circle-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="700" viewBox="0 0 873 873">
+    <g class="circle-1" id="Ellipse_2" data-name="Ellipse 1" stroke="#b2dcff" stroke-width="1" fill="blue" fill-opacity="0">
+      <circle cx="436.5" cy="436.5" r="380"/>
+    </g>
+  </svg> 
+</div>
+
+<!-- content -->
+
+<div class="container-krok-3">
+  <h3>Krok 3/3</h3>
+  <p>Test čichových smyslů. Cítíte cosi zkaženého?</p>
+  <img class="dog" src="images/dog.png" alt="">
+  <div class="answers">
+    <div class="yes">
+      <button onclick="citim_klik()" class="btn-other btn-other-yes">
+        Ano, fuj
+      </button>
+    </div>
+    <div class="no">
+      <button onclick="necitim_klik()" class="btn-other btn-other-no">
+        Nic necítím
+      </button>
+    </div>
+  </div>
+  </div>
+
+
+  <h3 class="vysledek-testu"></h3>
+
+
+<script src="./JS/script.js"></script>
+</body>
+</html>

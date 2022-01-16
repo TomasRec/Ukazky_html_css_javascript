@@ -1,0 +1,407 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background: radial-gradient(#fbfdff, #80bff1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container h3, .container-krok-2 h3, .container-krok-3 h3, .vysledek-testu {
+  color: #851f7c;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+.btn-1, .btn-other {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 40px;
+  border-style: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  background: linear-gradient(45deg, purple, pink);
+  cursor: pointer;
+}
+
+.btn-1:hover, .btn-other:hover {
+  opacity: 0.8;
+}
+
+.btn-1 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.btn-other {
+  margin-left: 10px;
+}
+
+.btn-other-yes {
+  background: #8ace8a;
+  color: #333;
+}
+
+.btn-other-no {
+  background: #700c0c;
+  color: #fff;
+}
+
+.circle, .circle-1 {
+  position: absolute;
+  z-index: -1;
+  top: -30vh;
+  left: 40vh;
+}
+
+.circle {
+  max-height: 1500px;
+}
+
+.circle-1 {
+  max-height: 1250px;
+}
+
+.circle-1:hover {
+  stroke-width: 3;
+  stroke-opacity: 0.8;
+  stroke-dasharray: 5px;
+}
+
+.big-viruses .virus-big-1, .big-viruses .virus-big-2, .big-viruses .virus-big-3, .small-viruses .virus-small-1, .small-viruses .virus-small-2, .small-viruses .virus-small-3, .other-viruses .virus-other-1, .other-viruses .virus-other-2, .other-viruses .virus-other-3, .other-viruses .virus-other-4, .other-viruses .virus-other-5 {
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.big-viruses .virus-big-1, .big-viruses .virus-big-2, .big-viruses .virus-big-3 {
+  width: 120px;
+  height: 120px;
+  top: 15vh;
+  left: 20vh;
+  background-image: url("../images/virus_L.svg");
+  background-size: 75px 75px;
+  -webkit-animation-name: floating-big;
+          animation-name: floating-big;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.big-viruses .virus-big-2 {
+  top: 35vh;
+  left: 180vh;
+}
+
+@-webkit-keyframes floating-big {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating-big {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+.small-viruses .virus-small-1, .small-viruses .virus-small-2, .small-viruses .virus-small-3 {
+  width: 75px;
+  height: 75px;
+  top: 8vh;
+  left: 20vh;
+  background-image: url("../images/virus_M.svg");
+  background-size: 50px 50px;
+  -webkit-animation-name: floating-small;
+          animation-name: floating-small;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.small-viruses .virus-small-2 {
+  top: 2vh;
+  left: 110vh;
+}
+
+.small-viruses .virus-small-3 {
+  top: 15vh;
+  left: 180vh;
+}
+
+@-webkit-keyframes floating-small {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 8px);
+            transform: translate(0, 8px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating-small {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 8px);
+            transform: translate(0, 8px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+.other-viruses .virus-other-1, .other-viruses .virus-other-2, .other-viruses .virus-other-3, .other-viruses .virus-other-4, .other-viruses .virus-other-5 {
+  width: 50px;
+  height: 50px;
+  top: 40vh;
+  left: 10vh;
+  background-image: url("../images/virus.svg");
+  background-size: 20px 20px;
+}
+
+.other-viruses .virus-other-2 {
+  top: 5vh;
+  left: 30vh;
+}
+
+.other-viruses .virus-other-3 {
+  top: 5vh;
+  left: 130vh;
+}
+
+.other-viruses .virus-other-4 {
+  top: 10vh;
+  left: 160vh;
+}
+
+.other-viruses .virus-other-5 {
+  top: 40vh;
+  left: 165vh;
+}
+
+.container {
+  margin-top: 30vh;
+}
+
+.container .myBar, .container .myBar-loaded {
+  height: 53px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, purple, pink);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .bar-border {
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 1px 2px;
+  width: 50vh;
+  height: 60px;
+  border: 1px solid grey;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .myBar {
+  width: 10%;
+}
+
+.container .myBar-loaded {
+  width: 100%;
+}
+
+.container-krok-2 .empty-1, .container-krok-2 .empty-2, .container-krok-2 .empty-3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 160px;
+  height: 160px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-krok-2 {
+  text-align: center;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-krok-2 .game-board {
+  margin-top: 10px;
+  width: 120vh;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-krok-2 .droppable-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-krok-2 .draggable-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.container-krok-2 .empty-1, .container-krok-2 .empty-2, .container-krok-2 .empty-3 {
+  background-image: url("../images/rectangle_empty.png");
+}
+
+.container-krok-2 .empty-2 {
+  background-image: url("../images/polygon_empty.svg");
+}
+
+.container-krok-2 .empty-3 {
+  background-image: url("../images/eclipse_empty.svg");
+}
+
+.container-krok-2 #rectangle, .container-krok-2 #eclipse, .container-krok-2 #polygon {
+  height: 100px;
+  height: 100px;
+}
+
+.container-krok-2 .spravne {
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.container-krok-2 .pokracovat {
+  display: none;
+  width: 30%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container-krok-2 .zacit-znovu {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.container-krok-3 {
+  margin-top: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-krok-3 .dog {
+  height: 200px;
+}
+
+.container-krok-3 .answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vysledek-testu {
+  margin-top: 60vh;
+}
+/*# sourceMappingURL=style.css.map */
